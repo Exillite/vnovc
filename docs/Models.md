@@ -4,12 +4,13 @@
 - nickname str
 - email str
 - password str
-- description str
-- novels list[Novel]
+- bio str
+- role str
 
 ## Novel
 - title str
 - description str
+- author User
 - is_public bool
 - persons list[Person]
 - chapters list[Chapter]
@@ -35,4 +36,4 @@
 - data BaseData
 
 ## Node
-- type str
+- node_type str

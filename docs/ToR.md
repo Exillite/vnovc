@@ -23,13 +23,15 @@
 
 ## Start node
 стартовая нода
+**Params:**
+- next node
 
 ## Set background node
 **Params:**
 - bacround uploaded file
 - next node
 
-## Speech Node
+## Speech node
 **Params:**
 - person
 - peson's sprite
@@ -45,16 +47,16 @@
 
 ## Logic node
 **Params:**
-- data derictory [global, scene, person]
+- data directory [global, scene, person]
 - optinal perosn
 - variable
 - condition
 - if node
 - else node
 
-## Edit variable edit
+## Edit variable node
 **Params:**
-- data derictory [global, scene, person]
+- data directory [global, scene, person]
 - optinal perosn
 - variable
 - update
