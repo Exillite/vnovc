@@ -17,3 +17,7 @@ class NovelModel(Document):
 
     class Config:
         collection_name = "novel"
+
+
+def register_novel_collections():
+    NovelModel.register_collection()

@@ -11,3 +11,7 @@ class SceneModel(Document):
 
     class Config:
         collection_name = "scene"
+
+
+def register_scene_collections():
+    SceneModel.register_collection()

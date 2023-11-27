@@ -10,3 +10,7 @@ class ChapterModel(Document):
 
     class Config:
         collection_name = "chapter"
+        
+        
+def register_chapter_collections():
+    ChapterModel.register_collection()

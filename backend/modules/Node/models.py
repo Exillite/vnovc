@@ -75,3 +75,15 @@ class EditVariableNode(Document):
 
 class GotoSceneNode(Document):
     scene: SceneModel
+
+
+def register_node_collections():
+    NodeModel.register_collection()
+    StartNodeModel.register_collection()
+    BackgroundNodeModel.register_collection()
+    SpeechNodeModel.register_collection()
+    ChooseNodeModel.register_collection()
+    ChooseNodeAnswerModel.register_embedded_collection()
+    LogicNodeModel.register_collection()
+    EditVariableNode.register_collection()
+    GotoSceneNode.register_collection()

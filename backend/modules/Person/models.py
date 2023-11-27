@@ -19,3 +19,8 @@ class SpriteModel(Document):
 
     class Config:
         collection_name = "sprite"
+
+
+def register_person_collections():
+    PersonModel.register_collection()
+    SpriteModel.register_collection()

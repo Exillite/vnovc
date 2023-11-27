@@ -12,3 +12,7 @@ class UserModel(Document):
     class Config:
         collection_name = "user"
         excludeFieldsResponse = ["password"]
+
+
+def register_user_collections():
+    UserModel.register_collection()
