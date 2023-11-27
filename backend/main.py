@@ -33,13 +33,13 @@ async def startup_event():
     register_scene_collections()
     register_user_collections()
 
-    await connect_to_mongo()  # TODO
+    await connect_to_mongo("", "")  # TODO
     print("Connect to mongo.")
 
 
 @app.on_event("shutdown")
 async def shutdown_event():
-    await close_mongo_connection()
+    close_mongo_connection()
     print("Close mongo connection.")
 
 
