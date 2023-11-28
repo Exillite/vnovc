@@ -14,7 +14,7 @@ class NodeModel(Document):
 
 
 class StartNodeModel(Document):
-    next_node: NodeModel
+    next_node_id: str
 
     class Config:
         collection_name = "start_node"
@@ -22,7 +22,7 @@ class StartNodeModel(Document):
 
 class BackgroundNodeModel(Document):
     background: str
-    next_node: NodeModel
+    next_node_id: str
 
     class Config:
         collection_name = "background_node"
@@ -32,7 +32,7 @@ class SpeechNodeModel(Document):
     person: PersonModel
     sprite: SpriteModel
     text: str
-    next_node: NodeModel
+    next_node_id: str
 
     class Config:
         collection_name = "speech_node"
@@ -48,7 +48,7 @@ class ChooseNodeModel(Document):
 
 class ChooseNodeAnswerModel(EmbeddedDocument):
     text: str
-    next_node: NodeModel
+    next_node_id: str
 
 
 class LogicNodeModel(Document):
@@ -56,8 +56,8 @@ class LogicNodeModel(Document):
     person: Optional[PersonModel]
     variable: str
     condition: str
-    if_node: NodeModel
-    else_node: NodeModel
+    if_node_id: str
+    else_node_id: str
 
     class Config:
         collection_name = "logic_node"
@@ -68,6 +68,7 @@ class EditVariableNode(Document):
     person: Optional[PersonModel]
     variable: str
     update: str
+    next_node_id: str
 
     class Config:
         collection_name = "edit_variable_node"
