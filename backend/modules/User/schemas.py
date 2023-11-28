@@ -18,5 +18,4 @@ class UserCreate(BaseModel):
 
 class UserUpdate(BaseModel):
     nickname: str
-    email: str
     bio: str
