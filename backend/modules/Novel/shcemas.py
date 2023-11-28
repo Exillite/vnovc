@@ -6,7 +6,7 @@ from modules.Person.schemas import Person
 from modules.Chapter.schemas import Chapter
 
 
-class Nonel(BaseModel):
+class Novel(BaseModel):
     title: str
     description: str
     author: User
@@ -16,7 +16,7 @@ class Nonel(BaseModel):
     data: Dict[str, int]
 
 
-class NonelCreate(BaseModel):
+class NovelCreate(BaseModel):
     title: str
     description: str
     author_id: str
@@ -26,10 +26,9 @@ class NonelCreate(BaseModel):
     data: Dict[str, int]
 
 
-class NonelUpdate(BaseModel):
+class NovelUpdate(BaseModel):
     title: str
     description: str
-    author_id: str
     is_public: bool
     persons_ids: List[str]
     chapters_ids: List[str]
