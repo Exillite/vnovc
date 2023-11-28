@@ -1,6 +1,4 @@
 from mangodm import Document
-from typing import List
-
 
 class UserModel(Document):
     nickname: str
