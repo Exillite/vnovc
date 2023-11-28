@@ -5,7 +5,6 @@ from typing import List
 class User(BaseModel):
     nickname: str
     email: str
-    password: str
     bio: str
     role: str
 
@@ -20,5 +19,4 @@ class UserCreate(BaseModel):
 class UserUpdate(BaseModel):
     nickname: str
     email: str
-    password: str
     bio: str
