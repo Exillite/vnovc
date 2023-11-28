@@ -63,7 +63,7 @@ class LogicNodeModel(Document):
         collection_name = "logic_node"
 
 
-class EditVariableNode(Document):
+class EditVariableNodeModel(Document):
     data_directory: str
     person: Optional[PersonModel]
     variable: str
@@ -74,7 +74,7 @@ class EditVariableNode(Document):
         collection_name = "edit_variable_node"
 
 
-class GotoSceneNode(Document):
+class GotoSceneNodeModel(Document):
     scene: SceneModel
 
 
@@ -86,5 +86,5 @@ def register_node_collections():
     ChooseNodeModel.register_collection()
     ChooseNodeAnswerModel.register_embedded_collection()
     LogicNodeModel.register_collection()
-    EditVariableNode.register_collection()
-    GotoSceneNode.register_collection()
+    EditVariableNodeModel.register_collection()
+    GotoSceneNodeModel.register_collection()
