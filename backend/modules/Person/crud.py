@@ -1,4 +1,3 @@
-from math import e
 from modules.Person.models import PersonModel, SpriteModel
 from modules.Person.schemas import *
 
