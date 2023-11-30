@@ -1,3 +1,4 @@
+from venv import create
 from pydantic import BaseModel
 from typing import List, Optional, Union
 
@@ -5,11 +6,20 @@ from modules.Person.schemas import Person, Sprite
 from modules.Scene.schemas import Scene
 
 
+nodes_type = Union["StartNode", "BackgroundNode", "SpeechNode",
+                   "ChooseNode", "LogicNode", "EditVariableNode", "GotoSceneNode"]
+
+create_nodes_type = Union["StartNodeCreate", "BackgroundNodeCreate", "SpeechNodeCreate",
+                          "ChooseNodeCreate", "LogicNodeCreate", "EditVariableNodeCreate", "GotoSceneNodeCreate"]
+
+update_nodes_type = Union["StartNodeUpdate", "BackgroundNodeUpdate", "SpeechNodeUpdate",
+                          "ChooseNodeUpdate", "LogicNodeUpdate", "EditVariableNodeUpdate", "GotoSceneNodeUpdate"]
+
+
 class Node(BaseModel):
     id: str
     node_type: str
-    node: Union["StartNode", "BackgroundNode", "SpeechNode",
-                "ChooseNode", "LogicNode", "EditVariableNode", "GotoSceneNode"]
+    node: nodes_type
 
 
 class NodeCreate(BaseModel):
