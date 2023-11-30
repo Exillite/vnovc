@@ -4,6 +4,15 @@ from typing import List, Optional
 from modules.Person.models import PersonModel, SpriteModel
 from modules.Scene.models import SceneModel
 
+"""
+start
+background
+speech
+choose
+logic
+edit_variable
+goto_scene
+"""
 
 class NodeModel(Document):
     node_type: str
@@ -67,7 +76,7 @@ class EditVariableNodeModel(Document):
     data_directory: str
     person: Optional[PersonModel]
     variable: str
-    update: str
+    update_variable: str
     next_node_id: str
 
     class Config:
