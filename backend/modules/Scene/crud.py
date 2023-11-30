@@ -10,12 +10,12 @@ async def create_scene(scene: SceneCreate) -> SceneModel:
     return scene_model
 
 
-async def get_scene(scene_id: int) -> Optional[SceneModel]:
+async def get_scene(scene_id: str) -> Optional[SceneModel]:
     scene_model = await SceneModel.get(id=scene_id)
     return scene_model
 
 
-async def edit_scene(scene_id: int, scene: SceneUpdate) -> SceneModel:
+async def edit_scene(scene_id: str, scene: SceneUpdate) -> SceneModel:
     scene_model = await SceneModel.get(id=scene_id)
     if not scene_model:
         raise Exception("Scene not found")
@@ -27,7 +27,7 @@ async def edit_scene(scene_id: int, scene: SceneUpdate) -> SceneModel:
     return scene_model
 
 
-async def delete_scene(scene_id: int) -> None:
+async def delete_scene(scene_id: str) -> None:
     scene = await SceneModel.get(id=scene_id)
     if not scene:
         raise Exception("Scene not found")
